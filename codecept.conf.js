@@ -18,14 +18,21 @@ exports.config = {
       waitForNavigation: 'networkidle0',
       waitForTimeout: 10000,
       timeout: 10000,
-    }
+    },
+    ChaiWrapper : {
+      require: "codeceptjs-chai"
+    },
+      Generator: {
+        require: './generator_helper.js',
+      },
   },
   include: {
     I: './steps_file.js',
     homePage: './pages/home.js',
     authPage: './pages/auth.js',
     createAccountPage: './pages/createAccount.js',
-    myAccount: '.pages/myAccount.js',
+    womenSectionPage: './pages/womenSection.js',
+    productCardPage: './pages/productCard.js',
   },
   bootstrap: null,
   mocha: {},

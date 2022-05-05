@@ -8,16 +8,33 @@ let user = {
   postalCode: '35211',
   mobilePhone: '+380930000000',
   asignAdress: 'My adress', 
+  email: '12525@gmail.com',
 }
 
 Feature('Store');
 
-Scenario('test something', ({ I, homePage, authPage, createAccountPage }) => {
-  homePage.openStore();
-  homePage.clickSignIn();
-  authPage.fillNewUserEmail(Date.now() + '@test.com');
-  authPage.clickCreateAccount();
-  createAccountPage.fillNewUserForm(user);
-  createAccountPage.clickSubmit();
-  pause()
+Before(({ I, homePage}) => {
+  homePage.openStore()
 });
+
+// Scenario('test something @reg', ({ I, homePage, authPage, createAccountPage, userData }) => {
+//   homePage.openStore();
+//   homePage.clickSignIn();
+//   authPage.fillNewUserEmail(user.email);
+//   authPage.clickCreateAccount();
+//   createAccountPage.fillNewUserForm(user);
+//   createAccountPage.clickSubmit();
+// });
+
+Scenario('test data @login', async ({ I, homePage, authPage, womenSectionPage, productCardPage}) => {
+  homePage.clickSignIn();
+  authPage.fillUserData(user);
+  authPage.clickLogInButton();
+  womenSectionPage.clickSection();
+  productCardPage.addItem();
+  // I.assertEqual(cardPrice, cartPrice);
+});
+
+// After(({ I, homePage }) => {
+//   homePage.clickLogOut()
+// });

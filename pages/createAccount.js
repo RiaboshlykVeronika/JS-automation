@@ -34,6 +34,4 @@ module.exports = {
  waitforPageLoad() {
    I.waitForVisible(this.firstNameInput);
  },
-
-
 }
