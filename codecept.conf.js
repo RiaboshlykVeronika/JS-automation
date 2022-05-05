@@ -33,6 +33,7 @@ exports.config = {
     createAccountPage: './pages/createAccount.js',
     womenSectionPage: './pages/womenSection.js',
     productCardPage: './pages/productCard.js',
+    userData: './data/user.js',
   },
   bootstrap: null,
   mocha: {},

@@ -1,5 +1,4 @@
 const { I } = inject();
-// let cartPrice = await I.grabTextFrom(this.cartPrice);
 
 module.exports = {
 
@@ -9,9 +8,7 @@ module.exports = {
   procesCarrierSubmit: {css: 'button[name="processCarrier"]'},
   checkOption: {css: '#cgv'},
   payModuleButton: {css: 'a[title="Pay by bank wire"]'},
-  price: {css: '#our_price_display'},
-  cartPrice: {css: '#product_price_1_1_684897'},
-  
+  cardPrice: {css: '#our_price_display'},
 
  addItem() { 
   I.waitForVisible(this.addToCartButton);
@@ -22,7 +19,10 @@ module.exports = {
   I.click(this.processAddressSubmit);
   I.checkOption(this.checkOption);
   I.click(this.procesCarrierSubmit);
-  // cartPrice;
+  I.waitForVisible(this.cartPrice)
   I.click(this.payModuleButton);
+ },
+  async getProductPrice() { 
+  return await I.grabTextFrom(this.cardPrice);
 }
 }

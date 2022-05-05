@@ -11,10 +11,10 @@ waitForPageLoad() {
   I.waitForVisible(this.newUserEmailInput);
 },
 
-fillNewUserEmail(email) {
-  this.waitForPageLoad();
-  I.fillField(this.newUserEmailInput, email);
-},
+// fillNewUserEmail(email) {
+//   this.waitForPageLoad();
+//   I.fillField(this.newUserEmailInput, email);
+// },
 
 clickCreateAccount() {
   I.click(this.createAccountButton);
