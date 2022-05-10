@@ -8,21 +8,24 @@ module.exports = {
   procesCarrierSubmit: {css: 'button[name="processCarrier"]'},
   checkOption: {css: '#cgv'},
   payModuleButton: {css: 'a[title="Pay by bank wire"]'},
-  cardPrice: {css: '#our_price_display'},
+  price: {css: '#product_price_1_1_687728'},
+  confirmButton: {css: '.button-medium'},
 
  addItem() { 
   I.waitForVisible(this.addToCartButton);
   I.click(this.addToCartButton);
   I.click(this.proceedToCheckoutButton);
-  pause();
+ I.waitForVisible(this.price);
   I.click(this.proceedToCheckoutButton);
+  I.waitForVisible(this.processAddressSubmit);
   I.click(this.processAddressSubmit);
+  I.waitForVisible(this.checkOption);
   I.checkOption(this.checkOption);
   I.click(this.procesCarrierSubmit);
-  I.waitForVisible(this.cartPrice)
   I.click(this.payModuleButton);
+  I.click(this.confirmButton);
  },
-  async getProductPrice() { 
-  return await I.grabTextFrom(this.cardPrice);
+ async getCartPrice() { 
+  return await I.grabTextFrom(this.price);
 }
 }

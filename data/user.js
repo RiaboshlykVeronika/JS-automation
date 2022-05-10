@@ -8,5 +8,5 @@ module.exports = {
   postalCode: '35211',
   mobilePhone: '+380930000000',
   asignAdress: 'My adress', 
-  email: '12525@gmail.com',
+  email: 'test13029@gmail.com',
 }

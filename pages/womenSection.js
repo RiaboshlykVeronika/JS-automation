@@ -3,7 +3,8 @@ const { I } = inject();
 module.exports = {
   womenSectionButton: {css: 'a[title="Women"]'},
   itemCard: {css: '.product-container .product-name'},
-  price: {css: '#product_price_1_1_684897'},
+  cardPrice: {css: '#our_price_display'},
+  
 
 clickSection() {
   I.waitForVisible(this.womenSectionButton);
@@ -11,7 +12,7 @@ clickSection() {
   I.waitForVisible(this.itemCard);
   I.click(this.itemCard);
 },
-async getCartPrice() { 
-  return await I.grabTextFrom(this.price);
-}
+async getProductPrice() { 
+    return await I.grabTextFrom(this.cardPrice);
+  }
 }

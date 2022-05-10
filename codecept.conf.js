@@ -32,7 +32,7 @@ exports.config = {
     authPage: './pages/auth.js',
     createAccountPage: './pages/createAccount.js',
     womenSectionPage: './pages/womenSection.js',
-    productCardPage: './pages/productCard.js',
+    productCartPage: './pages/productCart.js',
     userData: './data/user.js',
   },
   bootstrap: null,

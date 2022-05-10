@@ -11,19 +11,19 @@ waitForPageLoad() {
   I.waitForVisible(this.newUserEmailInput);
 },
 
-// fillNewUserEmail(email) {
-//   this.waitForPageLoad();
-//   I.fillField(this.newUserEmailInput, email);
-// },
+fillNewUserEmail(email) {
+  this.waitForPageLoad();
+  I.fillField(this.newUserEmailInput, email);
+},
 
 clickCreateAccount() {
   I.click(this.createAccountButton);
 },
 
-fillUserData(user) {
+fillUserData(userData) {
   I.waitForVisible(this.mailField);
-  I.fillField(this.mailField, user.email);
-  I.fillField(this.password, user.password);
+  I.fillField(this.mailField, userData.email);
+  I.fillField(this.password, userData.password);
 },
 
 clickLogInButton() {
