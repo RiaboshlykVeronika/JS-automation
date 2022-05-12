@@ -12,9 +12,9 @@ module.exports = {
     I.waitForVisible(this.newUserEmailInput);
   },
 
-  fillNewUserEmail() {
+  fillNewUserEmail(email) {
     this.waitForPageLoad();
-    I.fillField(this.newUserEmailInput, userData.email);
+    I.fillField(this.newUserEmailInput, email);
   },
 
   clickCreateAccount() {

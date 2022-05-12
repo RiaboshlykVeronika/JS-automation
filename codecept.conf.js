@@ -16,8 +16,8 @@ exports.config = {
       show: true,
       browser: 'chromium',
       waitForNavigation: 'networkidle0',
-      waitForTimeout: 10000,
-      timeout: 10000,
+      waitForTimeout: 15000,
+      timeout: 15000,
     },
     ChaiWrapper : {
       require: "codeceptjs-chai"

@@ -22,10 +22,15 @@ module.exports = {
     I.waitForVisible(this.checkOption);
     I.checkOption(this.checkOption);
     I.click(this.procesCarrierSubmit);
-    I.click(this.payModuleButton);
-    I.click(this.confirmButton);
   },
-  async getCartPrice() {
-    return await I.grabTextFrom(this.price);
+
+    async getCartPrice() {
+      return await I.grabTextFrom(this.price);
+    },
+   
+    confirmOrder() {
+    I.click(this.payModuleButton);
+    pause();
+    I.click(this.confirmButton);
   }
 }

@@ -14,6 +14,6 @@ module.exports = {
   },
 
   clickLogOut() {
-    I.click(this.logOutButton)
+    I.click(this.logOutButton);
   }
 }
