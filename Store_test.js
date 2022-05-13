@@ -1,4 +1,3 @@
-const productCart = require("./pages/productCart");
 
 Feature('Store');
 
